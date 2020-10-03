@@ -1,0 +1,25 @@
+.user-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-content: center;
+  text-align: left;
+}
+
+.repo-gird-list {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.repo-gird-list .repo-gird-list-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.repo-gird-list .repo-gird-list-content .avatar {
+  margin-right: 10px;
+}

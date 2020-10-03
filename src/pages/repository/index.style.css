@@ -1,0 +1,10 @@
+.repo-card {
+  margin-top: 25px;
+}
+.repo-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-content: center;
+  text-align: left;
+}

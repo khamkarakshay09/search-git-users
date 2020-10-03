@@ -1,0 +1,10 @@
+.avatar {
+  margin-right: 8px;
+}
+
+.option-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+}
