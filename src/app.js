@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { Container, makeStyles } from "@material-ui/core";
 import AppRoutes from "./routes";
 
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

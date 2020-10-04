@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -14,6 +15,7 @@ import DeviceHubIcon from "@material-ui/icons/DeviceHub";
 import StarIcon from "@material-ui/icons/Star";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import ErrorIcon from "@material-ui/icons/Error";
+import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 import "./index.style.css";
 
 class Repository extends Component {
@@ -56,6 +58,15 @@ class Repository extends Component {
           <Button variant="text" startIcon={<ErrorIcon />}>
             {userState?.repo?.open_issues}
           </Button>
+          <Link className="back-btn" to="/">
+            <Button
+              startIcon={<KeyboardBackspaceIcon />}
+              variant="contained"
+              color="primary"
+            >
+              Back
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     );

@@ -1,10 +1,22 @@
 .repo-card {
   margin-top: 25px;
 }
+
 .repo-card-header {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
   text-align: left;
+}
+
+.repo-card .back-btn {
+  margin-left: auto;
+}
+
+.repo-card .back-btn a,
+.repo-card .back-btn a:hover,
+.repo-card .back-btn a:focus,
+.repo-card .back-btn a:active {
+  text-decoration: none;
 }
