@@ -1,7 +1,7 @@
 import axiosInstance from "./index";
 
-export function getUsersService() {
-  return axiosInstance.get("/users");
+export function getUsersService(searchString) {
+  return axiosInstance.get(`/search/users?q=${searchString}`);
 }
 
 export function getUserService(user) {

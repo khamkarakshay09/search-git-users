@@ -20,8 +20,15 @@ const Options = (option) => {
 };
 
 class SearchUsers extends Component {
-  componentDidMount() {
-    this.props.getUsers();
+  constructor(props) {
+    super(props);
+
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch(event, value) {
+    if (value && value.length >= 4)
+      this.props.getUsers({ searchString: value });
   }
 
   render() {
@@ -33,9 +40,10 @@ class SearchUsers extends Component {
           freeSolo={true}
           disableClearable={true}
           getOptionLabel={(option) => option.login}
-          options={userState.users || []}
+          options={userState?.users?.items || []}
           renderOption={Options}
           onChange={this.props.handleSelect}
+          onInputChange={this.handleSearch}
           renderInput={(params) => (
             <TextField
               {...params}

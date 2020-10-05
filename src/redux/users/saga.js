@@ -19,9 +19,9 @@ import {
 } from "./actions";
 
 export function* getUsersSaga() {
-  yield takeLatest(GET_USERS_REQUEST, function* () {
+  yield takeLatest(GET_USERS_REQUEST, function* ({ payload }) {
     try {
-      const response = yield call(getUsersService);
+      const response = yield call(getUsersService, payload.searchString);
       yield put({ type: GET_USERS_SUCCESS, payload: response.data });
     } catch (e) {
       yield put({ type: GET_USERS_FAILURE });
